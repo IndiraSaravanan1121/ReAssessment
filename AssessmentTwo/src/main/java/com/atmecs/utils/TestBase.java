@@ -37,9 +37,7 @@ public class TestBase {
 			driver = new InternetExplorerDriver();
 			break;
 		}
-		driver.get(property.properties("url", Constants.CONFIG_PATH));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	public void closeBrowser() {

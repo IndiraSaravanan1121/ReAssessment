@@ -8,6 +8,12 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.atmecs.utils.TestBase;
 
+/**
+ * This class
+ * 
+ * @author indira.saravanan
+ *
+ */
 public class Helper extends TestBase {
 	public WebElement webElement = null;
 
@@ -74,7 +80,7 @@ public class Helper extends TestBase {
 		webElement = findLocators(driver, element);
 		webElement.sendKeys(values);
 	}
-	
+
 	public void clearValues(WebDriver driver, String element) {
 		webElement = findLocators(driver, element);
 		webElement.sendKeys(Keys.BACK_SPACE);

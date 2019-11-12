@@ -3,15 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.testscript.HeatClinic">
+      <class name="com.atmecs.testscript.TutorialsNinja">
         <methods>
-          <include name="verifyViewingMensText"/>
-          <include name="buyHabaneroShirt"/>
-          <include name="verifyUserOnRespectivePage"/>
-          <include name="endBrowser"/>
+          <include name="verifyGrandTotal"/>
           <include name="startBrowser"/>
+          <include name="addToCart"/>
+          <include name="validateHomepage"/>
+          <include name="verifyProductInCart"/>
+          <include name="validateProductDetail"/>
+          <include name="endBrowser"/>
         </methods>
-      </class> <!-- com.atmecs.testscript.HeatClinic -->
+      </class> <!-- com.atmecs.testscript.TutorialsNinja -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

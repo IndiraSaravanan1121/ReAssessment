@@ -8,7 +8,7 @@ import com.atmecs.utils.ExcelReader;
 import com.atmecs.utils.TestBase;
 
 public class Validation extends TestBase{
-	public ExcelReader readExcel=new ExcelReader(Constants.HEATCLINICTESTDATA_PATH);
+	public ExcelReader readExcel=new ExcelReader(Constants.TESTDATA_PATH);
 
 	String url;
 	String expectedUrl;
