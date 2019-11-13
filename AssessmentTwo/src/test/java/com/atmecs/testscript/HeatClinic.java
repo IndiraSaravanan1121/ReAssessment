@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.atmecs.config.Constants;
+import com.atmecs.helper.MyException;
 import com.atmecs.utils.ExcelReader;
 import com.atmecs.utils.TestBase;
 
@@ -16,27 +17,30 @@ public class HeatClinic extends TestBase {
 	public ExcelReader readExcel = new ExcelReader(Constants.TESTDATA_PATH);
 
 	@BeforeTest
-	@Parameters("url")
-	public void startBrowser(String url) throws Exception {
-		openBrowser();
-		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	public void startBrowser() throws Exception {
+		try {
+			openBrowser();
+			driver.get(property.properties("heatclinicurl", Constants.CONFIG_PATH));
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		} catch (MyException ex) {
+			log.error("exception occur" + ex.getMessage());
+		}
 	}
 
 	@Test(priority = 0)
 	public void verifyUserOnRespectivePage() throws Exception {
 		log.info("1.Verify user redirect to respective page");
-		validate.userOnRespectivePage(driver, "validateuserpage", 1, 0);
+		pages.userOnRespectivePage(driver, "validateuserpage", 1, 0);
 		helper.clickElement(driver, property.properties("loc_hotsauce_lbl", Constants.HEATCLINICLOCATOR_PATH));
-		validate.userOnRespectivePage(driver, "validateuserpage", 2, 0);
+		pages.userOnRespectivePage(driver, "validateuserpage", 2, 0);
 		helper.clickElement(driver, property.properties("loc_merchandise_lbl", Constants.HEATCLINICLOCATOR_PATH));
-		validate.userOnRespectivePage(driver, "validateuserpage", 3, 0);
+		pages.userOnRespectivePage(driver, "validateuserpage", 3, 0);
 		helper.clickElement(driver, property.properties("loc_clearance_lbl", Constants.HEATCLINICLOCATOR_PATH));
-		validate.userOnRespectivePage(driver, "validateuserpage", 4, 0);
+		pages.userOnRespectivePage(driver, "validateuserpage", 4, 0);
 		helper.clickElement(driver, property.properties("loc_newtohotsauce_lbl", Constants.HEATCLINICLOCATOR_PATH));
-		validate.userOnRespectivePage(driver, "validateuserpage", 5, 0);
+		pages.userOnRespectivePage(driver, "validateuserpage", 5, 0);
 		helper.clickElement(driver, property.properties("loc_faq_lbl", Constants.HEATCLINICLOCATOR_PATH));
-		validate.userOnRespectivePage(driver, "validateuserpage", 6, 0);
+		pages.userOnRespectivePage(driver, "validateuserpage", 6, 0);
 	}
 
 	@Test(priority = 1)
@@ -76,6 +80,10 @@ public class HeatClinic extends TestBase {
 
 	@AfterTest
 	public void endBrowser() {
-		closeBrowser();
+		try {
+			closeBrowser();
+		} catch (MyException ex) {
+			log.error("exception occur" + ex.getMessage());
+		}
 	}
 }

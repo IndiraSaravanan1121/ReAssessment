@@ -66,7 +66,6 @@ public class ExcelReader {
 
 		sheet = workbook.getSheet(sheetName);
 		String data = sheet.getRow(rowNum).getCell(cellNum).getStringCellValue();
-		System.out.println(data);
 		return data;
 	}
 

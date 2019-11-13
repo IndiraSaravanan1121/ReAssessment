@@ -55,34 +55,57 @@ public class Helper extends TestBase {
 
 	}
 
-	public void clickElement(WebDriver driver, String element) {
-		webElement = findLocators(driver, element);
-		webElement.click();
+	public void clickElement(WebDriver driver, String element) throws MyException {
+		if (element != null) {
+			webElement = findLocators(driver, element);
+			webElement.click();
+		} else {
+			throw new MyException("element not clicked");
+		}
 	}
 
-	public String getText(WebDriver driver, String element) {
-		webElement = findLocators(driver, element);
-		return webElement.getText();
+	public String getText(WebDriver driver, String element) throws MyException {
+		if (element != null) {
+			webElement = findLocators(driver, element);
+			return webElement.getText();
+		} else {
+			throw new MyException("no such element");
+		}
 	}
 
-	public void moveToElements(WebDriver driver, String element) {
+	public void moveToElements(WebDriver driver, String element) throws MyException {
 		Actions actions = new Actions(driver);
+		if(element!=null) {
 		webElement = findLocators(driver, element);
 		actions.moveToElement(webElement);
+		}else {
+			throw new MyException("no such element");
+		}
 	}
 
-	public void isDisplay(WebDriver driver, String element) {
+	public void isDisplay(WebDriver driver, String element) throws MyException {
 		webElement = findLocators(driver, element);
-		webElement.isDisplayed();
+		if (webElement.isDisplayed()) {
+			log.info("element is displayed");
+		} else
+			throw new MyException("element not displayed");
 	}
 
-	public void sendValues(WebDriver driver, String element, String values) {
+	public void sendValues(WebDriver driver, String element, String values) throws MyException {
+		if(element!=null) {
 		webElement = findLocators(driver, element);
 		webElement.sendKeys(values);
+		}else {
+			throw new MyException("values not sended");
+		}
 	}
 
-	public void clearValues(WebDriver driver, String element) {
+	public void clearValues(WebDriver driver, String element) throws MyException {
+		if(element!=null) {
 		webElement = findLocators(driver, element);
 		webElement.sendKeys(Keys.BACK_SPACE);
+		}else {
+			throw new MyException("no such element");
+		}
 	}
 }

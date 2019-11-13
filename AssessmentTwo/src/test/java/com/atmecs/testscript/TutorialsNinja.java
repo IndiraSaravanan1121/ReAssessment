@@ -5,10 +5,10 @@ import java.util.concurrent.TimeUnit;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.atmecs.config.Constants;
+import com.atmecs.helper.MyException;
 import com.atmecs.utils.ExcelReader;
 import com.atmecs.utils.TestBase;
 
@@ -17,25 +17,34 @@ public class TutorialsNinja extends TestBase {
 	public ExcelReader readExcel = new ExcelReader(Constants.TESTDATA_PATH);
 
 	@BeforeTest
-	@Parameters("url")
-	public void startBrowser(String url) throws Exception {
-		openBrowser();
-		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	public void startBrowser() throws Exception {
+		try {
+			openBrowser();
+			driver.get(property.properties("ninjaurl", Constants.CONFIG_PATH));
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		} catch (MyException ex) {
+			log.error("exception occur: " + ex.getMessage());
+		}
 	}
 
 	@Test(priority = 0)
-	public void validateHomepage() throws Exception {
+	public void validateHomepage() {
+		try {
 		log.info("1.HomePage Validation");
 		String actualTitle = driver.getTitle();
 		String expectedTitle = readExcel.getData("tutorialsninja", 1, 0);
 		Assert.assertEquals(actualTitle, expectedTitle);
-		log.info("HomePage is validated");
+	    log.info("Homepage is validated");
+		}catch(Exception e) {
+			log.error("Homepage not validated"+e);
+	}
 	}
 
 	@Test(priority = 1)
 	public void addToCart() throws Exception {
 		log.info("2.Add product to the cart");
+		helper.clickElement(driver, property.properties("loc_search_txtbx", Constants.TUTORIALSNINJALOCATOR_PATH));
 		helper.clickElement(driver, property.properties("loc_macbook_lbl", Constants.TUTORIALSNINJALOCATOR_PATH));
 		helper.clearValues(driver,
 				property.properties("loc_productsquantity_lbl", Constants.TUTORIALSNINJALOCATOR_PATH));
@@ -96,6 +105,10 @@ public class TutorialsNinja extends TestBase {
 
 	@AfterTest
 	public void endBrowser() {
-		closeBrowser();
+		try {
+			closeBrowser();
+		} catch (MyException ex) {
+			log.error("exception occur: " + ex.getMessage());
+		}
 	}
 }

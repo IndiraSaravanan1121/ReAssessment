@@ -2,8 +2,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="AutomateTutorialsNinja">
 	<test name="TutorialsNinja">
-		<parameter name="url"
-			value="http://tutorialsninja.com/demo/"></parameter>
 		<classes>
 			<class name="com.atmecs.testscript.TutorialsNinja" />
 		</classes>
