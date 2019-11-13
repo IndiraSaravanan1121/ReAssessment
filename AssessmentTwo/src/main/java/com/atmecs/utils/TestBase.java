@@ -8,15 +8,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import com.atmecs.config.Constants;
 import com.atmecs.helper.Helper;
 import com.atmecs.helper.MyException;
-import com.atmecs.pages.Pages;
 import com.atmecs.report.LogReport;
 
 public class TestBase {
 
 	public WebDriver driver;
 	public ReadProperties property = new ReadProperties();
-	public static Helper helper = new Helper();
-	public Pages pages;
+	public  Helper helper = new Helper();
 	public LogReport log = new LogReport();
 
 	public void openBrowser() throws MyException, Exception {

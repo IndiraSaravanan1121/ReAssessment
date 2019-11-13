@@ -7,8 +7,6 @@
         <methods>
           <include name="startBrowser"/>
           <include name="addToCart"/>
-          <include name="validateHomepage"/>
-          <include name="validateProductDetail"/>
           <include name="endBrowser"/>
         </methods>
       </class> <!-- com.atmecs.testscript.TutorialsNinja -->

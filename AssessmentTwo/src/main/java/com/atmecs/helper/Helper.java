@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import com.atmecs.utils.TestBase;
+import com.atmecs.report.LogReport;
 
 /**
  * This class
@@ -14,11 +14,12 @@ import com.atmecs.utils.TestBase;
  * @author indira.saravanan
  *
  */
-public class Helper extends TestBase {
+public class Helper {
 	public WebElement webElement = null;
+	private LogReport log = new LogReport();
 
 	public WebElement findLocators(WebDriver driver, String locatorType) {
-		String[] locator = locatorType.split(":");
+		String[] locator = locatorType.split(":",2);
 		try {
 			switch (locator[0]) {
 			case "class":
@@ -75,10 +76,10 @@ public class Helper extends TestBase {
 
 	public void moveToElements(WebDriver driver, String element) throws MyException {
 		Actions actions = new Actions(driver);
-		if(element!=null) {
-		webElement = findLocators(driver, element);
-		actions.moveToElement(webElement);
-		}else {
+		if (element != null) {
+			webElement = findLocators(driver, element);
+			actions.moveToElement(webElement).build().perform();
+		} else {
 			throw new MyException("no such element");
 		}
 	}
@@ -86,26 +87,35 @@ public class Helper extends TestBase {
 	public void isDisplay(WebDriver driver, String element) throws MyException {
 		webElement = findLocators(driver, element);
 		if (webElement.isDisplayed()) {
-			log.info("element is displayed");
 		} else
 			throw new MyException("element not displayed");
 	}
 
 	public void sendValues(WebDriver driver, String element, String values) throws MyException {
-		if(element!=null) {
-		webElement = findLocators(driver, element);
-		webElement.sendKeys(values);
-		}else {
+		if (element != null) {
+			webElement = findLocators(driver, element);
+			webElement.sendKeys(values);
+		} else {
 			throw new MyException("values not sended");
 		}
 	}
 
 	public void clearValues(WebDriver driver, String element) throws MyException {
-		if(element!=null) {
-		webElement = findLocators(driver, element);
-		webElement.sendKeys(Keys.BACK_SPACE);
-		}else {
+		if (element != null) {
+			webElement = findLocators(driver, element);
+			webElement.sendKeys(Keys.BACK_SPACE);
+		} else {
 			throw new MyException("no such element");
 		}
 	}
+
+	public void sendEnter(WebDriver driver, String element) throws MyException {
+		if (element != null) {
+			webElement = findLocators(driver, element);
+			webElement.sendKeys(Keys.ENTER);
+		} else {
+			throw new MyException("no such element");
+		}
+	}
+
 }
