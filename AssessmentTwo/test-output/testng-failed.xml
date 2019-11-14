@@ -6,7 +6,8 @@
       <class name="com.atmecs.testscript.TutorialsNinja">
         <methods>
           <include name="startBrowser"/>
-          <include name="addToCart"/>
+          <include name="verifyProductInCart"/>
+          <include name="validateProductDetail"/>
           <include name="endBrowser"/>
         </methods>
       </class> <!-- com.atmecs.testscript.TutorialsNinja -->
