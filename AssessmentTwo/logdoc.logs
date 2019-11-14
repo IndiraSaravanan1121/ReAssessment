@@ -988,3 +988,73 @@
 2019-11-13 21:14:38 INFO  LogReport:15 - 1.HomePage Validation
 2019-11-13 21:14:38 INFO  LogReport:15 - Homepage is validated
 2019-11-13 21:14:38 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:18:09 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:18:09 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:18:09 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:18:59 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:18:59 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:18:59 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:21:50 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:21:50 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:21:50 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:23:07 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:23:07 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:23:07 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:23:34 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:23:34 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:23:34 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:23:57 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:23:57 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:23:57 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:24:23 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:24:23 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:24:23 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:31:55 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:31:55 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:31:55 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:32:03 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:32:36 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:32:36 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:32:36 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:32:44 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:33:03 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:33:03 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:33:03 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:33:39 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:33:40 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 10:33:54 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:33:54 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:33:54 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:34:32 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:35:03 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 10:35:34 INFO  LogReport:15 - 5.Verify grant total and its update
+2019-11-14 10:37:37 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:37:37 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:37:37 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:38:15 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:38:15 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 10:38:36 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:38:36 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:38:36 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:38:46 INFO  LogReport:15 - 5.Verify grant total and its update
+2019-11-14 10:39:15 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:39:47 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 10:40:17 INFO  LogReport:15 - 5.Verify grant total and its update
+2019-11-14 10:47:07 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:47:07 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:47:07 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:47:18 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:47:50 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 10:48:20 INFO  LogReport:15 - 5.Verify grant total and its update
+2019-11-14 10:56:09 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 10:56:09 INFO  LogReport:15 - Homepage is validated
+2019-11-14 10:56:09 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 10:56:19 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 10:56:50 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 10:57:21 INFO  LogReport:15 - 5.Verify grant total and its update
+2019-11-14 11:07:28 INFO  LogReport:15 - 1.HomePage Validation
+2019-11-14 11:07:28 INFO  LogReport:15 - Homepage is validated
+2019-11-14 11:07:28 INFO  LogReport:15 - 2.Add product to the cart
+2019-11-14 11:07:37 INFO  LogReport:15 - 3.Verify product available in the cart
+2019-11-14 11:08:09 INFO  LogReport:15 - 4.Validate product details
+2019-11-14 11:08:40 INFO  LogReport:15 - 5.Verify grant total and its update
